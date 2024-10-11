@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
-import themecontext from '../context/themeContext'
+import React, {useContext} from 'react'
+import ContextProvider from '../context/themStore'
 
-function profile() {
-    const {user} = useContext(themecontext)
+function Profile() {
+    const {user} = useContext(ContextProvider)
     if(!user) return <h1>please login</h1>
 
   return (
@@ -13,4 +13,4 @@ function profile() {
   )
 }
 
-export default profile
+export default Profile
